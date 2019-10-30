@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Fuze.</string>
 	<key>Identifier</key>
-	<string>com.github.peertransfer.download.Fuze</string>
+	<string>com.github.flywire.download.Fuze</string>
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
