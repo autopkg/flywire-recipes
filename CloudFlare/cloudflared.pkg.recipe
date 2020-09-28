@@ -27,19 +27,21 @@
                 <key>pkgdirs</key>
                 <dict>
                     <key>usr/local/bin</key>
-                    <string>0775</string>
+                    <string>0755</string>
                 </dict>
             </dict>
         </dict>
-		<dict>
+        <dict>
             <key>Processor</key>
-            <string>Copier</string>
+            <string>Unarchiver</string>
             <key>Arguments</key>
             <dict>
-                <key>source_path</key>
-                <string>%RECIPE_CACHE_DIR%/downloads/%NAME%</string>
                 <key>destination_path</key>
-                <string>%pkgroot%/usr/local/bin/%NAME%</string>
+                <string>%pkgroot%/usr/local/bin</string>
+                <key>purge_destination</key>
+                <true/>
+                <key>archive_format</key>
+                <string>tar_gzip</string>
             </dict>
         </dict>
         <dict>
@@ -47,12 +49,10 @@
             <string>PkgCreator</string>
             <key>Arguments</key>
             <dict>
-                <key>pkgname</key>
-                <string>%NAME%-%version%</string>
                 <key>pkg_request</key>
                 <dict>
-                    <key>pkgdir</key>
-                    <string>%RECIPE_CACHE_DIR%</string>
+                    <key>pkgname</key>
+                    <string>%NAME%-%version%</string>
                     <key>id</key>
                     <string>com.cloudflare.cloudflared</string>
                     <key>version</key>
