@@ -8,8 +8,8 @@
 	<string>com.github.peertransfer.download.cloudflared</string>
 	<key>Input</key>
 	<dict>
-		<key>DOWNLOAD_URL</key>
-		<string>https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-darwin-amd64.pkg</string>
+		<key>GITHUB_REPO</key>
+		<string>cloudflare/cloudflared</string>
 		<key>NAME</key>
 		<string>cloudflared</string>
 	</dict>
@@ -17,13 +17,22 @@
 	<string>1.0.0</string>
 	<key>Process</key>
 	<array>
+        <dict>
+            <key>Processor</key>
+            <string>GitHubReleasesInfoProvider</string>
+            <key>Arguments</key>
+            <dict>
+                <key>asset_regex</key>
+                <string>^cloudflared-*?darwin.*?$</string>
+                <key>github_repo</key>
+                <string>%GITHUB_REPO%</string>
+            </dict>
+        </dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%.pkg</string>
-                <key>url</key>
-				<string>%DOWNLOAD_URL%</string>
+				<string>%NAME%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>

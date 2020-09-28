@@ -12,6 +12,8 @@
 		<string>apps/utilities</string>
 		<key>NAME</key>
 		<string>cloudflared</string>
+		<key>CATEGORY</key>
+		<string>Utilities</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -22,6 +24,8 @@
 			<string>Contains the command-line client and its libraries for Argo Tunnel, a tunneling daemon that proxies any local webserver through the Cloudflare network.</string>
 			<key>developer</key>
 			<string>Cloudflare</string>
+			<key>category</key>
+			<string>%CATEGORY%</string>
 			<key>display_name</key>
 			<string>Cloudflared for Argo Tunnel</string>
 			<key>name</key>
@@ -35,14 +39,14 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.peertransfer.download.cloudflared</string>
+	<string>com.github.peertransfer.pkg.cloudflared</string>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>pkg_path</key>
-				<string>%pathname%</string>
+				<string>%pkg_path%</string>
 				<key>repo_subdirectory</key>
 				<string>%MUNKI_REPO_SUBDIR%</string>
 			</dict>
