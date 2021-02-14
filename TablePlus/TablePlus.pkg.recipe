@@ -8,8 +8,6 @@
 	<string>com.github.peertransfer.pkg.TablePlus</string>
 	<key>Input</key>
 	<dict>
-		<key>BUNDLE_ID</key>
-		<string>com.tinyapp.TablePlus</string>
 		<key>NAME</key>
 		<string>TablePlus</string>
 	</dict>
