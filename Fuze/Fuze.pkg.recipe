@@ -8,8 +8,6 @@
 	<string>com.github.flywire.pkg.Fuze</string>
 	<key>Input</key>
 	<dict>
-		<key>BUNDLE_ID</key>
-		<string>com.fuzebox.fuze.Fuze</string>
 		<key>NAME</key>
 		<string>Fuze</string>
 	</dict>
