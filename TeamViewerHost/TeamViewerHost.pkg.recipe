@@ -12,12 +12,6 @@
 	<dict>
 		<key>NAME</key>
 		<string>TeamViewerHost</string>
-        <key>Comment</key>
-        <string>The download recipe is not handling etag and last_modified correctly so
-        we need to change the way we control when we need to do a new download.
-        </string>
-        <key>CHECK_FILESIZE_ONLY</key>
-        <string>true</string>
 		<key>Comment</key>
 		<string>We need to append the CustomID after the pkg name.</string>
 		<key>CustomID</key>
@@ -29,7 +23,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>flat_pkg_path</key>
-				<string>%pathname%/*.pkg</string>
+				<string>%pathname%/Install TeamViewerHost.app/Contents/Resources/Install TeamViewerHost.pkg</string>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/unpack</string>
 			</dict>
@@ -71,7 +65,7 @@
             <key>Arguments</key>
             <dict>
                 <key>source_pkg</key>
-                <string>%pathname%/*.pkg</string>
+                <string>%pathname%/Install TeamViewerHost.app/Contents/Resources/Install TeamViewerHost.pkg</string>
 				<key>pkg_path</key>
 				<string>%RECIPE_CACHE_DIR%/downloads/TeamViewerHost-%CustomID%.-%version%.pkg</string>
             </dict>
