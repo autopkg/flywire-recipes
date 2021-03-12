@@ -12,12 +12,6 @@
 	<dict>
 		<key>NAME</key>
 		<string>TeamViewerHost</string>
-        <key>Comment</key>
-        <string>The download recipe is not handling etag and last_modified correctly so
-        we need to change the way we control when we need to do a new download.
-        </string>
-        <key>CHECK_FILESIZE_ONLY</key>
-        <string>true</string>
 		<key>Comment</key>
 		<string>We need to append the CustomID after the pkg name.</string>
 		<key>CustomID</key>
