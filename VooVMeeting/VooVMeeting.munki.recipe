@@ -20,6 +20,8 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>description</key>
+			<string>Backed by Tencent's years of experience in audiovisual communications, VooV Meeting provides one-stop cloud-based conferencing solutions. The high-definition and smooth audiovisual quality allows you to experience immersive conference collaboration anytime, anywhere.</string>
 			<key>developer</key>
 			<string>Tencent</string>
 			<key>display_name</key>
