@@ -45,7 +45,7 @@
 				<key>input_path</key>
 				<string>%pathname%/%NAME%.app</string>
 				<key>requirement</key>
-				<string>identifier "com.soleng-fuze-connect-electron" and certificate leaf = H"8aa1cb70030a20f4fd2ec65a1890b77a412f7a38"</string>
+				<string>identifier "com.soleng-fuze-connect-electron" and certificate leaf = H"d567ac4351f14b4945ae7ffd3ad688fbb0a01c80"</string>
 			</dict>
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
@@ -64,3 +64,4 @@
 	</array>
 </dict>
 </plist>
+
