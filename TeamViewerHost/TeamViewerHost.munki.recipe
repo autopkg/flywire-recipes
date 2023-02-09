@@ -41,7 +41,7 @@
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.2.0</string>
+	<string>2.7.2</string>
 	<key>ParentRecipe</key>
     <string>com.github.peertransfer.pkg.TeamViewerHost</string>
     <key>Process</key>
