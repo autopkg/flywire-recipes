@@ -6,72 +6,72 @@
 	<string>Downloads the latest version of TeamViewerHost and builds a pkg.</string>
 	<key>Identifier</key>
 	<string>com.github.peertransfer.pkg.TeamViewerHost</string>
-    <key>ParentRecipe</key>
-    <string>io.github.hjuutilainen.download.TeamViewerHost</string>
-    <key>Input</key>
+	<key>Input</key>
 	<dict>
-		<key>NAME</key>
-		<string>TeamViewerHost</string>
 		<key>Comment</key>
 		<string>We need to append the CustomID after the pkg name.</string>
 		<key>CustomID</key>
 		<string>12345test</string>
+		<key>NAME</key>
+		<string>TeamViewerHost</string>
 	</dict>
+	<key>ParentRecipe</key>
+	<string>io.github.hjuutilainen.download.TeamViewerHost</string>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>flat_pkg_path</key>
-				<string>%pathname%/Install TeamViewerHost.app/Contents/Resources/Install TeamViewerHost.pkg</string>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/unpack</string>
+				<key>flat_pkg_path</key>
+				<string>%pathname%/Install TeamViewerHost.app/Contents/Resources/Install TeamViewerHost.pkg</string>
 			</dict>
 			<key>Processor</key>
 			<string>FlatPkgUnpacker</string>
 		</dict>
-        <dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>pkgroot</key>
-				<string>%RECIPE_CACHE_DIR%/payload/root/Applications</string>
 				<key>pkgdirs</key>
 				<dict/>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/payload/root/Applications</string>
 			</dict>
 			<key>Processor</key>
 			<string>PkgRootCreator</string>
 		</dict>
-        <dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>pkg_payload_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack/TeamViewerHostApp.pkg/Payload</string>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/payload/root/Applications</string>
+				<key>pkg_payload_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpack/TeamViewerHostApp.pkg/Payload</string>
 			</dict>
 			<key>Processor</key>
 			<string>PkgPayloadUnpacker</string>
 		</dict>
 		<dict>
-            <key>Arguments</key>
-            <dict>
-                <key>input_plist_path</key>
-                <string>%RECIPE_CACHE_DIR%/payload/root/Applications/TeamViewerHost.app/Contents/Info.plist</string>
-            </dict>
-            <key>Processor</key>
-            <string>Versioner</string>
-        </dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%RECIPE_CACHE_DIR%/payload/root/Applications/TeamViewerHost.app/Contents/Info.plist</string>
+			</dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+		</dict>
 		<dict>
-            <key>Arguments</key>
-            <dict>
-                <key>source_pkg</key>
-                <string>%pathname%/Install TeamViewerHost.app/Contents/Resources/Install TeamViewerHost.pkg</string>
+			<key>Arguments</key>
+			<dict>
 				<key>pkg_path</key>
 				<string>%RECIPE_CACHE_DIR%/downloads/TeamViewerHost-%CustomID%.-%version%.pkg</string>
-            </dict>
-            <key>Processor</key>
-            <string>PkgCopier</string>
-        </dict>
-    </array>
+				<key>source_pkg</key>
+				<string>%pathname%/Install TeamViewerHost.app/Contents/Resources/Install TeamViewerHost.pkg</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgCopier</string>
+		</dict>
+	</array>
 </dict>
 </plist>
