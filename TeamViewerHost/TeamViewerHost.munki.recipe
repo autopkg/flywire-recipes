@@ -8,12 +8,12 @@
 	<string>com.github.peertransfer.munki.TeamViewerHost</string>
 	<key>Input</key>
 	<dict>
-		<key>NAME</key>
-		<string>TeamViewerHost</string>
-		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps/TeamViewer</string>
 		<key>MUNKI_CATEGORY</key>
 		<string>Internet</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/TeamViewer</string>
+		<key>NAME</key>
+		<string>TeamViewerHost</string>
 		<key>pkg_ids_set_optional_true</key>
 		<array/>
 		<key>pkginfo</key>
@@ -43,11 +43,11 @@
 	<key>MinimumVersion</key>
 	<string>2.7.2</string>
 	<key>ParentRecipe</key>
-    <string>com.github.peertransfer.pkg.TeamViewerHost</string>
-    <key>Process</key>
-    <array>
-        <dict>
-            <key>Arguments</key>
+	<string>com.github.peertransfer.pkg.TeamViewerHost</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
 			<dict>
 				<key>faux_root</key>
 				<string>%RECIPE_CACHE_DIR%/payload/root</string>
@@ -57,7 +57,7 @@
 				</array>
 			</dict>
 			<key>Processor</key>
-			<string>MunkiInstallsItemsCreator</string> 
+			<string>MunkiInstallsItemsCreator</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
@@ -98,6 +98,6 @@
 			<key>Processor</key>
 			<string>MunkiOptionalReceiptEditor</string>
 		</dict>
-    </array>
+	</array>
 </dict>
 </plist>
