@@ -27,14 +27,16 @@ SUPPORTED_ARCH=("arm64", "x86_64")</string>
 			<array>
 				<string>testing</string>
 			</array>
-			<key>description</key>
-			<string>Contains the command-line client and its libraries for Argo Tunnel, a tunneling daemon that proxies any local webserver through the Cloudflare network.</string>
-			<key>developer</key>
-			<string>Cloudflare</string>
 			<key>category</key>
 			<string>%CATEGORY%</string>
+			<key>description</key>
+			<string>Contains the command-line client for Cloudflare Tunnel, a tunneling daemon that proxies traffic from the Cloudflare network to your origins.</string>
+			<key>developer</key>
+			<string>Cloudflare</string>
 			<key>display_name</key>
-			<string>Cloudflared for Argo Tunnel</string>
+			<string>Cloudflare Tunnel client (cloudflared)</string>
+			<key>icon_name</key>
+			<string>Cloudflare.png</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>supported_architectures</key>
@@ -43,8 +45,6 @@ SUPPORTED_ARCH=("arm64", "x86_64")</string>
 			</array>
 			<key>unattended_install</key>
 			<true/>
-            <key>icon_name</key>
-	        <string>generic.png</string>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
