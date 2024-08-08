@@ -3,11 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of cloudflared binary.</string>
+	<string>Downloads the latest version of cloudflared binary.
+
+ARCH_TYPE=("arm64", "amd64")</string>
 	<key>Identifier</key>
 	<string>com.github.flywire.download.cloudflared</string>
 	<key>Input</key>
 	<dict>
+		<key>ARCH_TYPE</key>
+		<string>arm64</string>
 		<key>GITHUB_REPO</key>
 		<string>cloudflare/cloudflared</string>
 		<key>NAME</key>
@@ -17,22 +21,22 @@
 	<string>1.0.0</string>
 	<key>Process</key>
 	<array>
-        <dict>
-            <key>Processor</key>
-            <string>GitHubReleasesInfoProvider</string>
-            <key>Arguments</key>
-            <dict>
-                <key>asset_regex</key>
-                <string>^cloudflared-*?darwin.*?$</string>
-                <key>github_repo</key>
-                <string>%GITHUB_REPO%</string>
-            </dict>
-        </dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>asset_regex</key>
+				<string>^cloudflared-%ARCH_TYPE%\.pkg$</string>
+				<key>github_repo</key>
+				<string>%GITHUB_REPO%</string>
+			</dict>
+			<key>Processor</key>
+			<string>GitHubReleasesInfoProvider</string>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%</string>
+				<string>cloudflared-%ARCH_TYPE%-%version%.pkg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
