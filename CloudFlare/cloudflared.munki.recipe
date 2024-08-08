@@ -13,12 +13,14 @@ SUPPORTED_ARCH=("arm64", "x86_64")</string>
 	<dict>
 		<key>ARCH_TYPE</key>
 		<string>arm64</string>
+		<key>CATEGORY</key>
+		<string>Utilities</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/utilities</string>
 		<key>NAME</key>
 		<string>cloudflared</string>
-		<key>CATEGORY</key>
-		<string>Utilities</string>
+		<key>SUPPORTED_ARCH</key>
+		<string>arm64</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -35,6 +37,10 @@ SUPPORTED_ARCH=("arm64", "x86_64")</string>
 			<string>Cloudflared for Argo Tunnel</string>
 			<key>name</key>
 			<string>%NAME%</string>
+			<key>supported_architectures</key>
+			<array>
+				<string>%SUPPORTED_ARCH%</string>
+			</array>
 			<key>unattended_install</key>
 			<true/>
             <key>icon_name</key>
