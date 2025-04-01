@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of LocalStack CLI.
 
-Valid options for ARCH input variable are "arm64" for Apple Silicon (defualt) or "amd64" for Intel.</string>
+Valid options for ARCH input variable are "arm64" for Apple Silicon (default) or "amd64" for Intel.</string>
 	<key>Identifier</key>
 	<string>com.github.flywire.download.LocalStackCLI</string>
 	<key>Input</key>
