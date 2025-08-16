@@ -60,21 +60,6 @@ ARCH_TYPE=("arm64", "amd64")</string>
 				</array>
 			</dict>
 		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>CodeSignatureVerifier</string>
-			<key>Arguments</key>
-			<dict>
-				<key>input_path</key>
-				<string>%pathname%</string>
-				<key>expected_authority_names</key>
-				<array>
-					<string>Developer ID Installer: Cloudflare Inc. (68WVV388M8)</string>
-					<string>Developer ID Certification Authority</string>
-					<string>Apple Root CA</string>
-				</array>
-			</dict>
-		</dict>
 	</array>
 </dict>
 </plist>
