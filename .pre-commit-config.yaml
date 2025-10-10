@@ -6,3 +6,4 @@ repos:
         args: ["--maxkb=100"]
       - id: check-ast
       - id: check-case-conflict
+      - id: check-docstring-first
