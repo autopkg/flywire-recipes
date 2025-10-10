@@ -22,3 +22,4 @@ repos:
     hooks:
       - id: check-plists
       - id: check-autopkg-recipes
+        args: ["--recipe-prefix=com.github.flywire.", "--strict", "--"]
