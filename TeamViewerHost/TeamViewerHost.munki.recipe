@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the current release version of TeamViewerHost and imports into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.peertransfer.munki.TeamViewerHost</string>
+	<string>com.github.flywire.munki.TeamViewerHost</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_CATEGORY</key>
@@ -43,7 +43,7 @@
 	<key>MinimumVersion</key>
 	<string>2.7.2</string>
 	<key>ParentRecipe</key>
-	<string>com.github.peertransfer.pkg.TeamViewerHost</string>
+	<string>com.github.flywire.pkg.TeamViewerHost</string>
 	<key>Process</key>
 	<array>
 		<dict>

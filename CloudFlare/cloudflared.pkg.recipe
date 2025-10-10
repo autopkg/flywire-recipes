@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of cloudflared binary and creates a pkg.</string>
 	<key>Identifier</key>
-	<string>com.github.peertransfer.pkg.cloudflared</string>
+	<string>com.github.flywire.pkg.cloudflared</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -13,64 +13,64 @@
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
-    <key>ParentRecipe</key>
-    <string>com.github.peertransfer.download.cloudflared</string>
+	<key>ParentRecipe</key>
+	<string>com.github.flywire.download.cloudflared</string>
 	<key>Process</key>
 	<array>
-        <dict>
-            <key>Processor</key>
-            <string>PkgRootCreator</string>
-            <key>Arguments</key>
-            <dict>
-                <key>pkgroot</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/pkg</string>
-                <key>pkgdirs</key>
-                <dict>
-                    <key>usr/local/bin</key>
-                    <string>0755</string>
-                </dict>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>Unarchiver</string>
-            <key>Arguments</key>
-            <dict>
-                <key>destination_path</key>
-                <string>%pkgroot%/usr/local/bin</string>
-                <key>purge_destination</key>
-                <true/>
-                <key>archive_format</key>
-                <string>tar_gzip</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>PkgCreator</string>
-            <key>Arguments</key>
-            <dict>
-                <key>pkg_request</key>
-                <dict>
-                    <key>pkgname</key>
-                    <string>%NAME%-%version%</string>
-                    <key>id</key>
-                    <string>com.cloudflare.cloudflared</string>
-                    <key>version</key>
-                    <string>%version%</string>
-                    <key>chown</key>
-                    <array>
-                        <dict>
-                            <key>path</key>
-                            <string>usr/local/bin</string>
-                            <key>user</key>
-                            <string>root</string>
-                            <key>group</key>
-                            <string>wheel</string>
-                        </dict>
-                    </array>
-                </dict>
-            </dict>
-        </dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkgdirs</key>
+				<dict>
+					<key>usr/local/bin</key>
+					<string>0755</string>
+				</dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/pkg</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>archive_format</key>
+				<string>tar_gzip</string>
+				<key>destination_path</key>
+				<string>%pkgroot%/usr/local/bin</string>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_request</key>
+				<dict>
+					<key>chown</key>
+					<array>
+						<dict>
+							<key>group</key>
+							<string>wheel</string>
+							<key>path</key>
+							<string>usr/local/bin</string>
+							<key>user</key>
+							<string>root</string>
+						</dict>
+					</array>
+					<key>id</key>
+					<string>com.cloudflare.cloudflared</string>
+					<key>pkgname</key>
+					<string>%NAME%-%version%</string>
+					<key>version</key>
+					<string>%version%</string>
+				</dict>
+			</dict>
+			<key>Processor</key>
+			<string>PkgCreator</string>
+		</dict>
 	</array>
 </dict>
 </plist>

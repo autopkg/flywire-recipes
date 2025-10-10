@@ -8,12 +8,12 @@
 	<string>com.github.flywire.download.Fuze-connect</string>
 	<key>Input</key>
 	<dict>
+		<key>CHECK_FILESIZE_ONLY</key>
+		<string>true</string>
 		<key>DOWNLOAD_URL</key>
 		<string>http://fuzeconnect.gts.fuze.com/</string>
 		<key>NAME</key>
 		<string>FuzeConnect</string>
-        <key>CHECK_FILESIZE_ONLY</key>
-		<string>true</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
@@ -23,12 +23,12 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%.dmg</string>
-                <key>request_headers</key>
-                <dict>
-                    <key>User-Agent</key>
-                    <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36</string>
-                </dict>
+				<string>FuzeConnect.dmg</string>
+				<key>request_headers</key>
+				<dict>
+					<key>User-Agent</key>
+					<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36</string>
+				</dict>
 				<key>url</key>
 				<string>%DOWNLOAD_URL%</string>
 			</dict>
@@ -43,7 +43,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_path</key>
-				<string>%pathname%/%NAME%.app</string>
+				<string>%pathname%/FuzeConnect.app</string>
 				<key>requirement</key>
 				<string>identifier "com.soleng-fuze-connect-electron" and certificate leaf = H"d567ac4351f14b4945ae7ffd3ad688fbb0a01c80"</string>
 			</dict>
@@ -54,7 +54,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_plist_path</key>
-				<string>%pathname%/%NAME%.app/Contents/Info.plist</string>
+				<string>%pathname%/FuzeConnect.app/Contents/Info.plist</string>
 				<key>plist_version_key</key>
 				<string>CFBundleShortVersionString</string>
 			</dict>
@@ -64,4 +64,3 @@
 	</array>
 </dict>
 </plist>
-

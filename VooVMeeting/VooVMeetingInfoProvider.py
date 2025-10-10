@@ -1,5 +1,4 @@
 #!/usr/local/autopkg/python
-# -*- coding: utf-8 -*-
 #
 # MIT License
 #

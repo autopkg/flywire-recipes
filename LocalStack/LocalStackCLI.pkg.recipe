@@ -8,10 +8,10 @@
 	<string>com.github.flywire.pkg.LocalStackCLI</string>
 	<key>Input</key>
 	<dict>
-		<key>NAME</key>
-		<string>LocalStackCLI</string>
 		<key>ARCH</key>
 		<string>arm64</string>
+		<key>NAME</key>
+		<string>LocalStackCLI</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.4.1</string>

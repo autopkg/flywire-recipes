@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of TablePlus and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.peertransfer.munki.TablePlus</string>
+	<string>com.github.flywire.munki.TablePlus</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
@@ -33,7 +33,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.peertransfer.download.TablePlus</string>
+	<string>com.github.flywire.download.TablePlus</string>
 	<key>Process</key>
 	<array>
 		<dict>
