@@ -24,3 +24,4 @@ repos:
       - id: check-autopkg-recipes
         args: ["--recipe-prefix=com.github.flywire.", "--strict", "--"]
       - id: format-xml-plist
+      - id: forbid-autopkg-overrides
