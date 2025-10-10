@@ -8,10 +8,10 @@
 	<string>com.github.flywire.download.VooVMeeting</string>
 	<key>Input</key>
 	<dict>
-		<key>NAME</key>
-		<string>VooV Meeting</string>
 		<key>ARCH</key>
 		<string></string>
+		<key>NAME</key>
+		<string>VooV Meeting</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3.1</string>
@@ -39,8 +39,6 @@
 			<string>com.github.n8felton.shared/MD5Checksum</string>
 		</dict>
 		<dict>
-			<key>Processor</key>
-			<string>CodeSignatureVerifier</string>
 			<key>Arguments</key>
 			<dict>
 				<key>input_path</key>
@@ -48,6 +46,8 @@
 				<key>requirement</key>
 				<string>identifier "com.tencent.tencentmeeting" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "88L2Q4487U"</string>
 			</dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
 		</dict>
 	</array>
 </dict>
