@@ -23,7 +23,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%.dmg</string>
+				<string>FuzeConnect.dmg</string>
                 <key>request_headers</key>
                 <dict>
                     <key>User-Agent</key>
@@ -43,7 +43,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_path</key>
-				<string>%pathname%/%NAME%.app</string>
+				<string>%pathname%/FuzeConnect.app</string>
 				<key>requirement</key>
 				<string>identifier "com.soleng-fuze-connect-electron" and certificate leaf = H"d567ac4351f14b4945ae7ffd3ad688fbb0a01c80"</string>
 			</dict>
@@ -54,7 +54,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_plist_path</key>
-				<string>%pathname%/%NAME%.app/Contents/Info.plist</string>
+				<string>%pathname%/FuzeConnect.app/Contents/Info.plist</string>
 				<key>plist_version_key</key>
 				<string>CFBundleShortVersionString</string>
 			</dict>
